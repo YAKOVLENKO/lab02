@@ -17,7 +17,7 @@ $ alias edit=vim // редактор
 ```
 
 ```bash
-$ npm install -g gistup
+$ npm install -g gistup // скачивание
 ```
 
 ```bash
