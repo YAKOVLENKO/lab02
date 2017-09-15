@@ -11,9 +11,9 @@
 ## Tutorial
 
 ```bash
-$ export GITHUB_USERNAME=<имя_пользователя>
-$ export GIST_TOKEN=<сохраненный_токен>
-$ alias edit=<nano|vi|vim|subl>
+$ export GITHUB_USERNAME=YAKOVLENKO // Присваиваем GITHUB_USERNAME значение YAKOVLENKO
+$ export GIST_TOKEN=<сохраненный_токен> // Присваиваем GITHUB_TOKEN значение token, что мы получили из lab01
+$ alias edit=vim // редактор
 ```
 
 ```bash
@@ -29,8 +29,8 @@ EOF
 ```
 
 ```bash
-$ cd ~
-$ mkdir -p workspace/labs/projects/
+$ cd ~ // домашняя папка
+$ mkdir -p workspace/labs/projects/ //создание папок projects, tasks, reports
 $ mkdir -p workspace/labs/tasks/
 $ mkdir -p workspace/labs/reports/
 ```
@@ -38,13 +38,13 @@ $ mkdir -p workspace/labs/reports/
 ## Report
 
 ```bash
-$ cd ~/workspace/labs/
-$ export LAB_NUMBER=02
-$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER}
-$ mkdir reports/lab${LAB_NUMBER}
-$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md
-$ cd reports/lab${LAB_NUMBER}
-$ edit REPORT.md
+$ cd ~/workspace/labs/ //папка labs
+$ export LAB_NUMBER=02 // Присваиваем LAB_NUMBER значение 02
+$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER} // получение информации с github
+$ mkdir reports/lab${LAB_NUMBER} // новая папка
+$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md // переименовываем README.md и копируем в созданную папку
+$ cd reports/lab${LAB_NUMBER} // вход в папку
+$ edit REPORT.md // редактирование файла
 $ gistup -m "lab${LAB_NUMBER}"
 ```
 
