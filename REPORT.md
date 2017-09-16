@@ -19,11 +19,11 @@ $ alias edit=vim # Настраиваем редактор vim
 ```bash
 $ npm install -g gistup 
 ```
-Создание и заполнение файла .gistup.json
+Создание и заполнение(токен) файла .gistup.json
 ```bash
-$ cat > ~/.gistup.json <<EOF #Создаем файл .gistup.json
+$ cat > ~/.gistup.json <<EOF 
 {
-  "token": "${GIST_TOKEN}" #Прописываем токен в файл .gistup.json
+  "token": "${GIST_TOKEN}" 
 }
 EOF
 ```
