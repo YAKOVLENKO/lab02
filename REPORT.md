@@ -21,6 +21,7 @@ $ npm install -g gistup
 ```
 Создание и заполнение(токен) файла .gistup.json
 ```bash
+# до конца файла
 $ cat > ~/.gistup.json <<EOF 
 {
   "token": "${GIST_TOKEN}" 
@@ -45,7 +46,7 @@ $ mkdir reports/lab${LAB_NUMBER} # Создаем новую папку
 $ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md # Переименовываем README.md и копируем в созданную папку
 $ cd reports/lab${LAB_NUMBER} # Входим в папку
 $ edit REPORT.md # Редактируеме файл
-$ gistup -m "lab${LAB_NUMBER}"
+$ gistup -m "lab${LAB_NUMBER}" # Коммитим
 ```
 
 ## Links
