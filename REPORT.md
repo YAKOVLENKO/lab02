@@ -21,9 +21,9 @@ $ npm install -g gistup
 ```
 Создание и заполнение файла .gistup.json
 ```bash
-$ cat > ~/.gistup.json <<EOF # Создаем файл .gistup.json
+$ cat > ~/.gistup.json <<EOF #Создаем файл .gistup.json
 {
-  "token": "${GIST_TOKEN}" # Прописываем токен в файл .gistup.json
+  "token": "${GIST_TOKEN}" #Прописываем токен в файл .gistup.json
 }
 EOF
 ```
