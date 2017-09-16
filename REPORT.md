@@ -9,42 +9,42 @@
 - [x] 3. Составить отчет и отправить ссылку личным сообщением в **Slack**
  
 ## Tutorial
-
+Присваивание переменным GITHUB_USERNAME и GITHUB_TOKEN значения, после настройка редактор
 ```bash
-$ export GITHUB_USERNAME=YAKOVLENKO // Присваиваем GITHUB_USERNAME значение YAKOVLENKO
-$ export GIST_TOKEN=<сохраненный_токен> // Присваиваем GITHUB_TOKEN значение token, что мы получили из lab01
-$ alias edit=vim // редактор
+$ export GITHUB_USERNAME=YAKOVLENKO # Присваиваем GITHUB_USERNAME значение YAKOVLENKO
+$ export GIST_TOKEN=<сохраненный_токен> # Присваиваем GITHUB_TOKEN значение token, что мы получили из lab01
+$ alias edit=vim # Настраиваем редактор vim
 ```
-
+Работа с пакетным менеджером
 ```bash
-$ npm install -g gistup // скачивание
+$ npm install -g gistup 
 ```
-
+Создание и заполнение файла .gistup.json
 ```bash
-$ cat > ~/.gistup.json <<EOF
+$ cat > ~/.gistup.json <<EOF # Создаем файл .gistup.json
 {
-  "token": "${GIST_TOKEN}"
+  "token": "${GIST_TOKEN}" # Прописываем токен в файл .gistup.json
 }
 EOF
 ```
-
+Переход в домашнюю папку и создание в ней новых папок
 ```bash
-$ cd ~ // домашняя папка
-$ mkdir -p workspace/labs/projects/ //создание папок projects, tasks, reports
-$ mkdir -p workspace/labs/tasks/
-$ mkdir -p workspace/labs/reports/
+$ cd ~ # домашняя папка
+$ mkdir -p workspace/labs/projects/ # Создаем папку projects
+$ mkdir -p workspace/labs/tasks/ # Создаем папку tasks
+$ mkdir -p workspace/labs/reports/ # Создаем папку projects, tasks, reports
 ```
 
 ## Report
 
 ```bash
-$ cd ~/workspace/labs/ //папка labs
-$ export LAB_NUMBER=02 // Присваиваем LAB_NUMBER значение 02
-$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER} // получение информации с github
-$ mkdir reports/lab${LAB_NUMBER} // новая папка
-$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md // переименовываем README.md и копируем в созданную папку
-$ cd reports/lab${LAB_NUMBER} // вход в папку
-$ edit REPORT.md // редактирование файла
+$ cd ~/workspace/labs/ # Переходим в папку labs
+$ export LAB_NUMBER=02 # Присваиваем LAB_NUMBER значение 02
+$ git clone https://github.com/tp-labs/lab${LAB_NUMBER} tasks/lab${LAB_NUMBER} # Получаем информацию с github
+$ mkdir reports/lab${LAB_NUMBER} # Создаем новую папку
+$ cp tasks/lab${LAB_NUMBER}/README.md reports/lab${LAB_NUMBER}/REPORT.md # Переименовываем README.md и копируем в созданную папку
+$ cd reports/lab${LAB_NUMBER} # Входим в папку
+$ edit REPORT.md # Редактируеме файл
 $ gistup -m "lab${LAB_NUMBER}"
 ```
 
